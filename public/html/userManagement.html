@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>首页</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="/css/userManagement.css">
+</head>
+<body>
+	<!-- 头部 -->
+	<header></header>
+	<!-- show -->
+	<div id="show_time">
+		
+	</div>
+	<!-- 功能列表 -->
+	<div class="nav-menu"></div>
+	<!-- 功能展示 -->
+	
+		<div class="content">
+			<!--<div class="container">-->
+			<div class="condition">
+				<img src="/images/home.png">
+				<p>您所在的位置是:<span>用户管理页面</span></p>
+			</div>
+			<div class="serch">
+				<form class="sign-form">
+				  <div class="form-group">
+				    <label for="nameUser">用户名: </label>
+				    <input type="text" class="form-control" name ="username" id="nameUser" placeholder="请输入用户名">
+				  </div>
+				</form>
+				<button type="button" class="btn btn-success" id="queryBtn">
+					<img src="/images/search.png">
+					查询
+				</button>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#regModal">
+					<img src="/images/tianjia.png">
+					添加用户
+				</button>
+			</div>
+			<!-- 表格，显示当前页信息 -->
+			<table class="table table-bordered table-striped user-table user" id="table">
+				<thead>
+					<tr>
+						<th class="hidden">用户编码</th>
+						<th>用户名称</th>
+						<th>出生日期</th>
+						<th>用户电话</th>
+						<th class="hidden">密码</th>
+						<th>用户类别</th>
+						<th>注册时间</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+			<!--分页-->
+			<nav>
+			  <ul class="pagination page">
+			    <li class="disabled prev">
+			      <a href="#">
+			        <span>&laquo;</span>
+			      </a>
+			    </li>
+			    <li class="disabled next">
+			      <a href="#">
+			        <span>&raquo;</span>
+			      </a>
+			    </li>
+			  </ul>
+			</nav>
+			
+		<!--</div>-->
+	</div>
+	<div class="modal fade" id="updateModal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">添加用户</h4>
+	      </div>
+	      <div class="modal-body">
+	      	<div class="alert alert-danger hidden reg-error">用户注册失败，请稍后重试</div>
+	        <form class="up-form">
+	        	<div class="form-group hidden">
+				    <label for="up_id">用户编码</label>
+				    <input type="text" class="form-control" name="_id" id="up_id" placeholder="请输入用户名">
+				  </div>
+			  <div class="form-group">
+			    <label for="upUsername">用户名称</label>
+			    <input type="text" class="form-control" name="username" id="upUsername" placeholder="请输入用户名">
+			  </div>
+			  <div class="form-group">
+			    <label for="upUserdate">出生日期</label>
+			    <input type="text" class="form-control" name="date" id="upUserdate" placeholder="请输入出生日期">
+			  </div>
+			  <div class="form-group">
+			    <label for="upUserphone">用户电话</label>
+			    <input type="text" class="form-control" name="phonenumber" id="upUserphone" placeholder="请输入电话">
+			  </div>
+			</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	        <button type="button" class="btn btn-primary btn-update">确定</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+	
+	<script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+	<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/js/common/header.js"></script>
+	<script src="/js/common/show.js"></script>
+	<script src="/js/common/nav.js"></script>
+	<script src="/js/common/registerModel.js"></script>
+</body>
+</html>

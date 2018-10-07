@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/update.css">
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header></header>
+		<!-- show -->
+		<div id="show_time">
+			
+		</div>
+		<!-- 功能列表 -->
+		<div class="nav-menu"></div>
+		<!--内容-->
+		<div class="content">
+			<div class="condition">
+				<img src="/images/home.png">
+				<p>您所在的位置是:<span>密码修改页面</span></p>
+			</div>
+			<form class="update-form">
+				<div class="form-group">
+			    <label for="loginUser">用户名</label>
+			    <input type="text" class="form-control" name="username" id="loginUser" placeholder="请输入用户名">
+			  </div>
+				<div class="form-group">
+				    <label for="updateOld">旧密码：</label>
+				    <input type="password" class="form-control" name="password" id="updateOld" placeholder="请输入原密码">
+				</div>
+				<div class="alert alert-danger hidden update-error">原密码输入错误</div>
+				<div class="form-group">
+				    <label for="updateNew">新密码：</label>
+				    <input type="password" class="form-control" name="newpassword" id="updateNew" placeholder="请输入新密码">
+				  </div>
+				<div class="form-group">
+				    <label for="updateOk">确认新密码：</label>
+				    <input type="password" class="form-control" name="okpassword" id="updateOk" placeholder="请输入确认新密码，且保证与新密码一致">
+				</div>
+			</form>
+			<button type="button" class="btn btn-primary modify-btn">保存</button>
+		</div>
+		
+		
+		
+		<script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+		<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="/js/common/header.js"></script>
+		<script src="/js/common/show.js"></script>
+		<script src="/js/common/nav.js"></script>
+		<script src="/js/common/update.js"></script>
+	</body>
+</html>

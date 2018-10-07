@@ -1,0 +1,149 @@
+/*头部*/
+body{
+	overflow: hidden;
+}
+.navbar{
+	background: #337ab7;
+	border:none;
+	position: relative;
+}
+.navbar-header a{
+	padding-left: 100px;
+	color: #ffffff !important;
+}
+.navbar-header img{
+	position: absolute;
+	left:50px;
+	top:50%;
+	margin-top: -16px;
+}
+.welcome{
+	margin-top: 8px;	
+}
+.navbar-inverse .navbar-nav>li>a{
+	color: white;
+	margin-top: -5px;
+	margin-left: 2px;
+}
+/*功能栏*/
+/*标识*/
+.show{
+	height: 30px;
+	line-height: 30px;
+	background: #FFFAFA;
+	border-bottom: 1px solid #DCDCDC;
+	display: flex !important;
+	justify-content:space-between;
+	margin-top: -20px;
+	position: relative;
+}
+.show p{
+	margin-left: 50px;
+	margin-right: 50px;
+}
+.show #shizhong{
+	position: absolute;
+	left: 50px;
+	top:50%;
+	margin-top: -9px;
+}
+.nav-menu{
+	width: 240px;
+	height: 1200px;
+	background: #F5F5F5;
+	border-right: 1px solid #DCDCDC;
+	overflow: hidden;
+	position: relative;
+}
+.nav-menu img{
+	position: absolute;
+	left:15px;
+	top:8px;
+}
+.list-group{
+	margin: 25px;
+	width: 180px;
+	text-align: center;
+}
+#div{
+	position:absolute;
+	left: 80px;
+	z-index: 999;
+}
+#div img{
+	margin-top: -3px;
+}
+.content{
+	position: relative;
+	left:280px;
+	top:-1200px;
+	width: 1050px;
+	height: 1200px;
+/*	background: red;*/
+	overflow: hidden;
+}
+.content .condition{
+	position: relative;
+	width: 1050px;
+	height: 30px;
+	border:1px solid #ccc;
+	border-radius: 5px;
+}
+.content .condition img{
+	position: absolute;
+	left:40px;
+	top:50%;
+	margin-top: -10px;
+}
+.content .condition p{
+	width: 400px;
+	height: 100%;
+	margin-left: 75px;
+	line-height: 30px;
+	font-size:12px; 
+	font-weight: 600;
+}
+.content .condition p span{
+	color: #337ab7;
+}
+.content .serch{
+	position: relative;
+	width: 1050px;
+	height: 50px;
+	background:#dddddd;
+}
+.content .serch form{
+	width: 300px;
+	float: left;
+}
+.content .serch form .form-group label{
+	display: block;
+	margin-top: 15px;
+	font-size:13px;
+	font-weight: normal;
+	float: left;
+	margin-left: 30px;
+}
+.content .serch form .form-group .form-control{
+	float: left;
+	height: 25px;
+	width: 200px;
+	margin-top: 13px;
+	margin-left: 5px;
+}
+.content .serch button{
+	margin-top: 7px;
+}
+.content .serch button:nth-child(3){
+	margin-left: 50px;
+}
+#table{
+	width: 1050px;
+}
+.user{
+	width: 82%;
+}
+.page{
+	position: fixed;
+}
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="/lib/bootstrap/css/bootstrap.min.css">
+		<link rel="stylesheet" href="/css/supplier.css">
+	</head>
+	<body>
+		<!-- 头部 -->
+		<header></header>
+		<!-- show -->
+		<div id="show_time">
+			
+		</div>
+		<!-- 功能列表 -->
+		<div class="nav-menu"></div>
+		<!--内容-->
+		<div class="content">
+			<div class="condition">
+				<img src="/images/home.png">
+				<p>您所在的位置是:<span>供应商管理页面</span></p>
+			</div>
+			<div class="serch">
+				<form class="sign-form">
+				  <div class="form-group">
+				    <label for="nameSupp">供应商名称: </label>
+				    <input type="text" class="form-control" name ="suppname" id="nameSupp" placeholder="请输入供应商名称">
+				  </div>
+				</form>
+				<button type="button" class="btn btn-success" id="queryBtn">
+					<img src="/images/search.png">
+					查询
+				</button>
+				<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#suppModal">
+					<img src="/images/tianjia.png">
+					添加供应商
+				</button>
+			</div>
+			<!-- 表格，显示当前页信息 -->
+			<table class="table table-bordered table-striped user-table user" id="table">
+				<thead>
+					<tr>
+						<th class="hidden">供应商编码</th>
+						<th>供应商名称</th>
+						<th>联系人</th>
+						<th>联系电话</th>
+						<th>联系地址</th>
+						<th>传真</th>
+						<th>创建时间</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					
+				</tbody>
+			</table>
+			<nav>
+			  <ul class="pagination page">
+			    <li class="disabled prev">
+			      <a href="#">
+			        <span>&laquo;</span>
+			      </a>
+			    </li>
+			    <li class="disabled next">
+			      <a href="#">
+			        <span>&raquo;</span>
+			      </a>
+			    </li>
+			  </ul>
+			</nav>
+		</div>
+		
+		<!-- 添加供应商的模态框 -->
+	<div class="modal fade" id="suppModal" tabindex="-1" role="dialog">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+	        <h4 class="modal-title" id="myModalLabel">添加供应商</h4>
+	      </div>
+	      <div class="modal-body">
+	      <div class="alert alert-danger hidden supp-error">添加供应商失败，请稍后重试</div>
+	        <form class="supp-form">
+	        	<div class="form-group hidden">
+				    <label for="supp_id">供应商编码</label>
+				    <input type="text" class="form-control" name="_id" id="supp_id" placeholder="请输入供应商编码">
+				  </div>
+			  <div class="form-group">
+			    <label for="suppName">供应商名称</label>
+			    <input type="text" class="form-control" name="name" id="suppName" placeholder="请输入供应商名称">
+			  </div>
+			  <div class="form-group">
+			    <label for="suppPerson">联系人</label>
+			    <input type="text" class="form-control" name="person" id="suppPerson" placeholder="请输入联系人">
+			  </div>
+			  <div class="form-group">
+			    <label for="suppPhone">联系电话</label>
+			    <input type="text" class="form-control" name="phone" id="suppPhone" placeholder="请输入联系电话">
+			  </div>
+			  <div class="form-group">
+			    <label for="suppAddress">联系地址</label>
+			    <input type="text" class="form-control" name="address" id="suppAddress" placeholder="请输入联系地址">
+			  </div>
+			   <div class="form-group">
+			    <label for="suppNumber">传真</label>
+			    <input type="text" class="form-control" name="number" id="suppNumber" placeholder="请输入传真">
+			  </div>
+			</form>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+	        <button type="button" class="btn btn-primary btn-supplier">确定</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+		
+		<script src="/lib/jquery/jquery-1.12.4.min.js"></script>
+		<script src="/lib/bootstrap/js/bootstrap.min.js"></script>
+		<script src="/js/common/header.js"></script>
+		<script src="/js/common/show.js"></script>
+		<script src="/js/common/nav.js"></script>
+		<script src="../js/supplier/supplierModel.js"></script>
+	</body>
+</html>
