@@ -29,21 +29,25 @@ app.use(session({
 	}
 }));
 
-//// 权限认证
-//app.use(function(req, res, next){
-//// 判断请求资源的URL
-//const {url} = req;
-//if (url.endsWith(".html") && url !== "/") { // 访问其它页面资源
-//  if (req.session.loginUser) // 已有登录用户
-//    next(); // 继续访问
-//  else { // 没有登录用户，跳转到首页
-//    res.redirect("/");
-//    return;
-//  }
-//} else {
-//  next();
-//}
-//});
+// 权限认证
+app.use(function(req, res, next){
+// 判断请求资源的URL
+const {url} = req;
+if (url.endsWith(".html") && url !== "/") { // 访问其它页面资源
+	if(url=="/html/login.html"){
+		next();
+	}else{
+		if(req.session.loginUser) // 已有登录用户
+      	next(); // 继续访问
+    else { // 没有登录用户，跳转到首页
+      res.redirect("/");
+      return;
+    }
+   } 
+} else {
+    next();
+}
+});
 
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
